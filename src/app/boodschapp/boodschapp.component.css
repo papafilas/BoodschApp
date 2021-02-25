@@ -1,0 +1,58 @@
+ul {
+    list-style: none;
+
+}
+
+.buttonsTop {
+
+    width: 100px;
+    float: left;
+}
+
+.fullWidth {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    background-color:powderblue;
+}
+
+.fullWidthDo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    float: none;
+    width: 100%;
+    background-color:aliceblue;
+}
+
+.fullWidthDone {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    float: none;
+    width: 100%;
+    background-color:lightslategrey;
+    color: hotpink;
+}
+
+.ownHeader {
+    color:honeydew;
+    font-size: larger;
+    font-weight: bold;    
+}
+
+.strike {
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+.hr50{
+    width:50%;
+    text-align:left;
+    margin-left:0;  
+}
+
+
+
+
+

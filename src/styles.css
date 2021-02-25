@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+.topSpace {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    html, body {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    html {
+        overflow-x: hidden;
+    }
+    .hText {
+        font-size: large;
+    }
+    .tText {
+        font-size: large;
+    }
+    .textbox {
+        width: 100%;
+        font-size: xx-large;
+    }
+    .but {
+        width: 100%;
+        font-size: large;
+    }
+}

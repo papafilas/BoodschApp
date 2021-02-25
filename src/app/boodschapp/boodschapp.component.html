@@ -1,0 +1,69 @@
+<div class="fullWidth">
+
+  <div style="margin:2em;">
+    <h2 class="hText"> Maak een Erik's BoodschApp-lijstje!</h2>
+    <div>
+      <div style="margin-top:2em;" class="hText" (keydown)="enter($event)">
+        <span style="color:rgb(255, 102, 0)" *ngIf="lijst.value.length < 2">
+          <p>Vul je artikel in en klik op koop! ;-)</p>
+        </span>
+        <span style="color:rgb(255, 102, 0)" *ngIf="lijst.value.length >= 2">
+          <p>Dit gaat goed!</p>
+        </span>
+
+        <div class="row">
+          <div class="col-xs-12 mt-2 col-md-4 col-lg-3"><input type="text" class="textbox" (keyup)='0' #lijst
+              placeholder="wat wil je meenemen?" [(ngModel)]="boodschap" (blur)="onBlur()" /></div>
+
+          <div class="col-xs-12 mt-2 col-md-8 col-lg-9"><input type="number" class="textbox" placeholder="en hoeveel?"
+              [(ngModel)]="stuks" /></div>
+
+        </div>
+        <div style="margin-top:2em;">
+
+          <div><button [disabled]="lijst.value.length < 2 || !lijst.value" mat-raised-button color="accent" class="but"
+              (click)="onClick()">
+              Koop!</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fullWidthDo" *ngIf="aantalBoodschappen >= 1">
+
+      <button type="button" *ngIf="aantalBoodschappen >= 2" mat-flat-button color="primary"
+        (click)="sorteerAB()">{{sorteer}}</button>
+
+      <ul>
+        <li *ngFor="let boodschap of boodschappen; let i=index" style="margin-top: 10px;margin-bottom: 10px;">
+          <button type="button" mat-mini-fab color="basic" style="margin-right: 15px;"
+            (click)="vinkAf(boodschap.artikel, boodschap.stuks, i)">
+            <mat-icon>done</mat-icon>
+          </button>
+          <span (click)="verwijderArtikel(boodschap.artikel, i)"><button type="button" mat-mini-fab color="accent"
+              style="margin-right: 15px;">
+              <mat-icon>delete</mat-icon>
+            </button> {{ boodschap.stuks }} stuks van {{ boodschap.artikel}} </span>
+          <span>
+          </span>
+          <div *ngIf="selectedIndex == i">
+            <hr class="hr50">
+            <p>
+              <button type="button" mat-flat-button color="primary" (click)="verwijderNu(i)">{{naamButton}}</button>
+            </p>
+            <hr class="hr50">
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="fullWidthDone" *ngIf="aantalBoodschappenAf >= 1">
+      <p class="ownHeader">Klaar!</p>
+      <ul>
+        <li *ngFor="let boodschapAf of boodschappenAf; let i=index" style="margin-top: 10px;margin-bottom: 10px;">
+          <span class="strike"> {{ boodschapAf.stuks }} stuks van {{ boodschapAf.artikel}} </span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>

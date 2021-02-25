@@ -1,0 +1,17 @@
+.fullWidth {
+    color: aliceblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    background-color:steelblue;
+}
+
+@media screen and (max-width: 767px) {
+
+    .textDiv {
+
+        font-size: smaller;
+    }
+
+    
+}
