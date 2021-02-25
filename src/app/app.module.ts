@@ -14,6 +14,11 @@ import { FormsModule } from '@angular/forms';
 import { UitlegComponent } from './uitleg/uitleg.component';
 import { NavigatieComponent } from './navigatie/navigatie.component';
 
+// export {AppComponent};
+// export {BoodschappComponent};
+// export {UitlegComponent};
+// export {NavigatieComponent};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,10 +43,7 @@ import { NavigatieComponent } from './navigatie/navigatie.component';
       ])
   ],
   providers: [],
-  bootstrap: [AppComponent]
-})
-
-@NgModule({
+  bootstrap: [AppComponent],
   exports: [RouterModule]
 })
 export class AppModule { }

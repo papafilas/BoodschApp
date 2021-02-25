@@ -92,4 +92,3 @@ export class BoodschappComponent implements OnInit {
   }
 }
 
-// github check
