@@ -30,17 +30,17 @@ import { NavigatieComponent } from './navigatie/navigatie.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-      FormsModule,
-      HttpClientModule,
-      MatFormFieldModule,
-      MatInputModule,
-      MatButtonModule,
-      MatIconModule,
-      RouterModule.forRoot([
-        { path: '', component: BoodschappComponent , pathMatch: 'full' },
-        { path: 'Boodschapp', component: AppComponent},
-        { path: 'Uitleg', component: UitlegComponent},
-      ])
+    FormsModule,
+    HttpClientModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    RouterModule.forRoot([
+      { path: '', component: BoodschappComponent, pathMatch: 'full' },
+      { path: 'Boodschapp', component: AppComponent },
+      { path: 'Uitleg', component: UitlegComponent },
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent],
